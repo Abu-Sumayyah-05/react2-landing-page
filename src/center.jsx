@@ -6,14 +6,22 @@ import Group6 from './Rectangle 10.2 (1).png'
 
 
 export default function Center() {
+    const [cartCount, setCartCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartCount(cartCount + 1);
+    alert("Added Samurai King Resting to cart!");
+  };
+
     return (
         <>
         <main>
   <div className="Add">
     <h2 className="king">Samurai King Resting</h2>
-    <a href="" className="add_to">
+    <button><a href="" className="add_to" onClick={handleAddToCart}>
       Add to cart
-    </a>
+    </a></button>
+    <p>Cart:{cartCount}items </p>
   </div>
   <img src={Group3} alt="" className="main_image" />
   <div className="about">

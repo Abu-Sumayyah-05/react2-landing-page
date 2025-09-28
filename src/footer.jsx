@@ -4,6 +4,18 @@ import Group8 from './Group 51.png';
 import Group9 from './Group 52.png';
 
  export default function Footer() {
+    const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedPrices, setSelectedPrices] = useState([]);
+
+  // Handle price selection
+  const handlePriceChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setSelectedPrices([...selectedPrices, value]);
+    } else {
+      setSelectedPrices(selectedPrices.filter(price => price !== value));
+    }
+  };
     return(
         <>
         <footer>
@@ -58,22 +70,22 @@ import Group9 from './Group 52.png';
       <h3>Price Range</h3>
       <form className="price">
         <label className="">
-          <input type="checkbox" name="price" defaultValue="lt20" />
+          <input type="checkbox" name="price" defaultValue="lt20" onClick={handlePriceChange}/>
           <span>Lower than $20</span>
         </label>
         <br />
         <label className="">
-          <input type="checkbox" name="price" defaultValue="20-100" />
+          <input type="checkbox" name="price" defaultValue="20-100" onClick={handlePriceChange} />
           <span>$20 - $100</span>
         </label>
         <br />
         <label>
-          <input type="checkbox" name="price" defaultValue="100-200" />
+          <input type="checkbox" name="price" defaultValue="100-200" onClick={handlePriceChange} />
           <span>$100 - $200</span>
         </label>
         <br />
         <label>
-          <input type="checkbox" name="price" defaultValue="gt200" />
+          <input type="checkbox" name="price" defaultValue="gt200" onClick={handlePriceChange} />
           <span>More than $200</span>
         </label>
       </form>
