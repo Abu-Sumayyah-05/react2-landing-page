@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "react_landing",
+			"path": "."
+		},
+		{
+			"name": "images",
+			"path": "../landing page/images"
+		}
+	],
+	"settings": {}
+}
