@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Group7 from './Group 49.png';
 import Group8 from './Group 51.png';
 import Group9 from './Group 52.png';
 
  export default function Footer() {
-    const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
 
   // Handle price selection

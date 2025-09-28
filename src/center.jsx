@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Group3 from './Group 44 (1).png';
 import Group4 from './Rectangle 10.png';
 import Group5 from './Rectangle 10.1.png';
@@ -6,7 +6,8 @@ import Group6 from './Rectangle 10.2 (1).png'
 
 
 export default function Center() {
-    const [cartCount, setCartCount] = useState(0);
+ const [cartCount, setCartCount] = useState(0);
+
 
   const handleAddToCart = () => {
     setCartCount(cartCount + 1);
@@ -18,9 +19,9 @@ export default function Center() {
         <main>
   <div className="Add">
     <h2 className="king">Samurai King Resting</h2>
-    <button><a href="" className="add_to" onClick={handleAddToCart}>
+    <a href="" className="add_to" onClick={handleAddToCart}>
       Add to cart
-    </a></button>
+    </a>
     <p>Cart:{cartCount}items </p>
   </div>
   <img src={Group3} alt="" className="main_image" />
